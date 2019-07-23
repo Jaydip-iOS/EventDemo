@@ -1,0 +1,26 @@
+PODS:
+  - Analytics (3.6.10)
+  - AppsFlyerFramework (4.10.0)
+  - segment-appsflyer-ios (1.3.1):
+    - Analytics (~> 3.5)
+    - AppsFlyerFramework (= 4.10.0)
+
+DEPENDENCIES:
+  - Analytics (~> 3.0)
+  - AppsFlyerFramework
+  - segment-appsflyer-ios
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Analytics
+    - AppsFlyerFramework
+    - segment-appsflyer-ios
+
+SPEC CHECKSUMS:
+  Analytics: 63744ad4afa65c3bcdcdb7a94b62515bde5b3900
+  AppsFlyerFramework: d356c24fa0653bfa518b09613f6b46e980600e90
+  segment-appsflyer-ios: c5a8e3a8446920922e91539c28dea5b699945a86
+
+PODFILE CHECKSUM: 1104936a73c15fd89ac498872f9e63ffc02cb629
+
+COCOAPODS: 1.7.1

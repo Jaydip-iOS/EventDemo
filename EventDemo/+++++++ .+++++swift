@@ -1,0 +1,39 @@
+//
+//  ViewController.swift
+//  EventDemo
+//
+//  Created by Developer on 22/07/19.
+//  Copyright © 2019 Jaydip. All rights reserved.
+//
+
+import UIKit
+import AppsFlyerLib
+
+class ViewController: UIViewController {
+
+    var Button = UIButton()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        Button = UIButton(frame: CGRect(x: 0, y: 0, width: 250, height: 250))
+        Button.setTitle("Custom Event", for: .normal)
+        Button.center = self.view.center
+        self.view.addSubview(self.Button)
+        Button.setTitleColor(UIColor.green, for: .normal)
+        Button.addTarget(self, action: #selector(self.buttonTapped(_:)), for: .touchUpInside)
+    }
+    
+    @objc func buttonTapped(_ sender:UIButton) {
+//        AppsFlyerTracker.shared()?.trackEvent(name: "Screen Tap", values: ["data": "userData"], completionHandler: { (data, error) in
+//            print("Error is : ",error)
+//            print("Data is : ",data)
+//        })
+        AppsFlyerTracker.shared().trackEvent(AFEventPurchase,
+                                             withValues: [
+                                                AFEventParamRevenue: "1200",
+                                                AFEventParamCurrency : "JPY"
+            ]);
+    }
+
+
+}
+
